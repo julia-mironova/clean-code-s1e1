@@ -16,7 +16,9 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 
 //New task list item
 var createNewTaskElement=function(taskString){
+
     var listItem=document.createElement("li");
+
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
     //label
@@ -25,12 +27,14 @@ var createNewTaskElement=function(taskString){
     var editInput=document.createElement("input");//text
     //button.edit
     var editButton=document.createElement("button");//edit button
+
     //button.delete
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
     label.className="task";
+
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
@@ -41,11 +45,9 @@ var createNewTaskElement=function(taskString){
 
     deleteButton.className="delete";
     deleteButtonImg.src="./remove.svg";
-    deleteButtonImg.className="delete-button"; // !! I add to make a class like in html for new point
-    
-    //!! I have to--прописать к картинке в каждом добавлении alt="delete from list"!!!!
-
     deleteButton.appendChild(deleteButtonImg);
+
+
     //and appending.
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
@@ -57,15 +59,18 @@ var createNewTaskElement=function(taskString){
 
 
 
-var addTask=function() {
+var addTask=function(){
     console.log("Add Task...");
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
+
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
+
     taskInput.value="";
+
 }
 
 //Edit an existing task.
@@ -106,7 +111,6 @@ var taskCompleted=function() {
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
-    //listItem.classList = "completed"; //!!I put class that it completed 
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 }

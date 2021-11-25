@@ -41,7 +41,6 @@ var createNewTaskElement=function(taskString){
 
     deleteButton.className="delete";
     deleteButtonImg.src="./remove.svg";
-    deleteButtonImg.className="delete-button"; // !! I add to make a class like in html for new point
     
     //!! I have to--прописать к картинке в каждом добавлении alt="delete from list"!!!!
 
@@ -106,7 +105,6 @@ var taskCompleted=function() {
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
-    //listItem.classList = "completed"; //!!I put class that it completed 
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 }

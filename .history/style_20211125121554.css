@@ -134,13 +134,13 @@ li > * {
 	width: 226px;
 }
 
-.delete-button {
+. {
 	height: 2em;
 	transform: rotateZ(45deg);
 	transition: transform 200ms ease-in;
 }
 
-.delete-button:hover {
+button.delete img:hover {
 	transform: rotateZ(0);
 }
 
