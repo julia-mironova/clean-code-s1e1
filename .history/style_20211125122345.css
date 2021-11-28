@@ -21,10 +21,10 @@ body {
 }
 
 @media (max-width:768px) {
-	.matrix-info { 
-		text-align: center;
-	}
-	}
+.matrix-info { 
+	text-align: center;
+}
+}
 
 .todo-filds {
 	display: block;
@@ -43,18 +43,17 @@ body {
 }
 
 ul {
-	margin: 0;
+	margin:0;
 	padding: 0px;
 }
-
 li,
 h3 {
-	list-style: none;
+	list-style:none;
 }
 
 input,
 button{
-	outline: none;
+	outline:none;
 }
 
 button {
@@ -145,27 +144,22 @@ li > * {
 	transform: rotateZ(0);
 }
 
-/*TODO:make this classes in js and do it short and workable*/
 /* Completed */
-/*ul#completed-tasks label*/
-.completed-deleted__task {
+ul#completed-tasks label {
 	text-decoration: line-through;
 	color: #888;
 }
 
-/* Edit Task
-ul li input[type=text] */
-.input-none {
-	display: none;
+/* Edit Task */
+ul li input[type=text] {
+	display:none;
 }
 
-/*ul li.edit-mode input[type=text]*/
-.edit-mode__change {
-	display: inline-block;
-	width: 224px;
+ul li.edit-mode input[type=text] {
+	display:inline-block;
+	width:224px;
 }
 
-/*ul li.edit-mode label*/
-.nie-pokazue {
-	display: none;
+ul li.edit-mode label {
+	display:none;
 }

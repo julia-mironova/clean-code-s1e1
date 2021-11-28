@@ -16,26 +16,26 @@
       <section class="add-item" id="add-item">
         <label for="new-task" class="add">Add Item</label>
           <div class="add-new-task">
-            <input id="new-task" class="task-todo input-text">
+            <input id="new-task" class="task-todo input-text" type="text">
             <button>Add</button>
           </div>
       </section>
       <section class="todo-list">
         <h3>Todo</h3>
-          <ul id="incomplete-tasks" class="incomplete-tasks">
-            <li class="incomplete-tasks__item">
+          <ul id="incomplete-tasks">
+            <li>
               <input type="checkbox" class="check-square">
               <label class="task-todo">Pay Bills</label>
-              <input class="task-todo input-text input-none">
+              <input type="text" class="task-todo input-text">
               <button class="edit">Edit</button>
               <button class="delete">
                 <img class="delete-button" src="./remove.svg" alt="delete from list">
               </button>
             </li>
-            <li class="edit-mode incomplete-tasks__item">
+            <li class="edit-mode">
               <input type="checkbox" class="check-square">
-              <label class="task-todo nie-pokazue">Go Shopping</label>
-              <input value="Go Shopping" class="task-todo input-text">
+              <label class="task-todo">Go Shopping</label>
+              <input type="text" value="Go Shopping" class="task-todo input-text">
               <button class="edit">Save</button>
               <button class="delete">
                 <img class="delete-button" src="./remove.svg" alt="delete from list">
@@ -44,21 +44,20 @@
           </ul>
       </section>
       <section class="completed-deleted">
-        <h3>Completed</h3>
-          <ul id="completed-tasks" class="completed-deleted__task">
-            <li class="completed-tasks__item">
-              <input type="checkbox" class="check-square" checked>
-              <label class="task-todo">See the Doctor</label>
-              <input class="task-todo input-text input-none">
-              <button class="edit">Edit</button>
-              <button class="delete">
-                <img class="delete-button" src="./remove.svg" alt="delete from list">
-              </button>
-            </li>
-          </ul>
+      <h3>Completed</h3>
+        <ul id="completed-tasks">
+          <li>
+            <input type="checkbox" class="check-square" checked>
+            <label class="task-todo">See the Doctor</label>
+            <input type="text" class="task-todo input-text">
+            <button class="edit">Edit</button>
+            <button class="delete">
+              <img class="delete-button" src="./remove.svg" alt="delete from list">
+            </button>
+          </li>
+        </ul>
       </section>
     </main>
     <script src="app.js"></script>
-    <script src="self-estimation.js"></script>
   </body>
 </html>

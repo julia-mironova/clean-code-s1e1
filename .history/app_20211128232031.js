@@ -43,7 +43,7 @@ var createNewTaskElement=function(taskString){
 
     deleteButton.className="delete";
     deleteButtonImg.src="./remove.svg";
-    deleteButtonImg.setAttribute("alt", "delete from list");
+    deleteButtonImg.setAttribute(alt, "value")
     deleteButtonImg.className="delete-button"; // !! I add to make a class like in html for new point
     
     //TODO:!! I have to--прописать к картинке в каждом добавлении alt="delete from list"!!!!
@@ -82,7 +82,7 @@ var editTask=function() {
     console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
     var listItem=this.parentNode;
-    var editInput=listItem.querySelector("input.task-todo");
+    var editInput=listItem.querySelector("input[type=text]");
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("edit-mode");

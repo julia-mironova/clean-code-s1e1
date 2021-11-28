@@ -16,7 +16,7 @@
       <section class="add-item" id="add-item">
         <label for="new-task" class="add">Add Item</label>
           <div class="add-new-task">
-            <input id="new-task" class="task-todo input-text">
+            <input id="new-task" class="task-todo input-text" type="text">
             <button>Add</button>
           </div>
       </section>
@@ -26,7 +26,7 @@
             <li class="incomplete-tasks__item">
               <input type="checkbox" class="check-square">
               <label class="task-todo">Pay Bills</label>
-              <input class="task-todo input-text input-none">
+              <input type="text" class="task-todo input-text display-none">
               <button class="edit">Edit</button>
               <button class="delete">
                 <img class="delete-button" src="./remove.svg" alt="delete from list">
@@ -34,8 +34,8 @@
             </li>
             <li class="edit-mode incomplete-tasks__item">
               <input type="checkbox" class="check-square">
-              <label class="task-todo nie-pokazue">Go Shopping</label>
-              <input value="Go Shopping" class="task-todo input-text">
+              <label class="task-todo">Go Shopping</label>
+              <input type="text" value="Go Shopping" class="task-todo input-text">
               <button class="edit">Save</button>
               <button class="delete">
                 <img class="delete-button" src="./remove.svg" alt="delete from list">
@@ -49,7 +49,7 @@
             <li class="completed-tasks__item">
               <input type="checkbox" class="check-square" checked>
               <label class="task-todo">See the Doctor</label>
-              <input class="task-todo input-text input-none">
+              <input type="text" class="task-todo input-text display-none">
               <button class="edit">Edit</button>
               <button class="delete">
                 <img class="delete-button" src="./remove.svg" alt="delete from list">
@@ -59,6 +59,5 @@
       </section>
     </main>
     <script src="app.js"></script>
-    <script src="self-estimation.js"></script>
   </body>
 </html>
