@@ -36,6 +36,7 @@ var createNewTaskElement=function(taskString){
     checkBox.className="check-square";
     editInput.type="text";
     editInput.className="task-todo";
+    editInput.className="input-text";
    // editInput.className="input-none";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
@@ -43,7 +44,6 @@ var createNewTaskElement=function(taskString){
 
     deleteButton.className="delete";
     deleteButtonImg.src="./remove.svg";
-    deleteButtonImg.setAttribute("alt", "delete from list");
     deleteButtonImg.className="delete-button"; // !! I add to make a class like in html for new point
     
     //TODO:!! I have to--прописать к картинке в каждом добавлении alt="delete from list"!!!!
@@ -65,15 +65,12 @@ var addTask=function() {
     console.log("Add Task...");
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
-    var listItem = createNewTaskElement(taskInput.value);
+    var listItem=createNewTaskElement(taskInput.value);
     listItem.classList.add("incomplete-tasks__item");
-    let editItem = listItem.querySelector("input.task-todo");
-    editItem.classList.add("input-text");
-    editItem.classList.add("input-none");
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
-    //listItem.label.classList.add('nie-pokazue');
+    listItem.label.classList.add('nie-pokazue');
     taskInput.value="";
 }
 
@@ -82,7 +79,7 @@ var editTask=function() {
     console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
     var listItem=this.parentNode;
-    var editInput=listItem.querySelector("input.task-todo");
+    var editInput=listItem.querySelector("input[type=text]");
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("edit-mode");
