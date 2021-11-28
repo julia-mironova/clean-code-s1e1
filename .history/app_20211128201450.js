@@ -87,12 +87,10 @@ var editTask=function() {
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
-        editInput.classList.add("input-none");
-        editInput.classList.remove("edit-mode__change");
+        editInput.classList.add("")
         editBtn.innerText="Edit";
     } else {
         editInput.value=label.innerText;
-        editInput.classList.add("edit-mode__change");
         editBtn.innerText="Save";
     }
     //toggle .editmode on the parent.

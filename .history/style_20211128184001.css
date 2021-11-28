@@ -147,24 +147,21 @@ li > * {
 
 /*TODO:make this classes in js and do it short and workable*/
 /* Completed */
-/*ul#completed-tasks label*/
 .completed-deleted__task {
 	text-decoration: line-through;
 	color: #888;
 }
 
-/* Edit Task
-ul li input[type=text] */
-.input-none {
+/* Edit Task */
+ul li input[type=text] {
 	display: none;
 }
 
-/*ul li.edit-mode input[type=text]*/
-.edit-mode__change {
+ul li.edit-mode input[type=text] {
 	display: inline-block;
 	width: 224px;
 }
 
-ul li.edit-mode label{
+ul li.edit-mode label {
 	display: none;
 }

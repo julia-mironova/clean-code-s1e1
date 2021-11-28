@@ -156,15 +156,15 @@ li > * {
 /* Edit Task
 ul li input[type=text] */
 .input-none {
-	display: none;
+	/*display: none;*/
+	color: aqua;
 }
 
-/*ul li.edit-mode input[type=text]*/
-.edit-mode__change {
+ul li.edit-mode input[type=text] {
 	display: inline-block;
 	width: 224px;
 }
 
-ul li.edit-mode label{
+ul li.edit-mode label {
 	display: none;
 }

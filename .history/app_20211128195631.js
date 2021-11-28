@@ -33,7 +33,7 @@ var createNewTaskElement=function(taskString){
     label.className="task-todo";
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.className="check-square";
+    checkBox.className="checkbox";
     editInput.type="text";
     editInput.className="task-todo";
     editInput.className="input-text";
@@ -66,7 +66,6 @@ var addTask=function() {
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
-    listItem.classList.add("incomplete-tasks__item");
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
@@ -87,12 +86,9 @@ var editTask=function() {
         //switch to .editmode
         //label becomes the inputs value.
         label.innerText=editInput.value;
-        editInput.classList.add("input-none");
-        editInput.classList.remove("edit-mode__change");
         editBtn.innerText="Edit";
     } else {
         editInput.value=label.innerText;
-        editInput.classList.add("edit-mode__change");
         editBtn.innerText="Save";
     }
     //toggle .editmode on the parent.

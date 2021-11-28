@@ -1,0 +1,1 @@
+console.log("+43: think, that everything is done, have some problem with edit, so -2")
